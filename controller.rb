@@ -2,6 +2,9 @@ layout 'layout.html.slim'
 ignore /.git/
 ignore /\/_.*/
 ignore 'README.md'
+ignore /.*\.csv/
+ignore /.*\.sh/
+ignore /secret.*/
 
 #here's how to make helpers that you can use in your views
 helpers do

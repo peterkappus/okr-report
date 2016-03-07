@@ -1,5 +1,4 @@
 - @current = :home
-- groups = get_goals
 .row.underbar
   .col-md-9
     h1 GDS Goals
@@ -27,4 +26,4 @@
             .col-md-6
               ol
                 - groups[group_name][objective_name].each do |key_result|
-                  li =key_result
+                  li ==key_result.to_s.gsub("\n","<br>")
