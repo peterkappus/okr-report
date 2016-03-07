@@ -1,14 +1,15 @@
 # OKR Report Site
 
-Based on this boilerplate setup: https://github.com/peterkappus/slim-boot-gulp
-Generate a nice looking OKR report site from a google spreadsheet using JS (Slim, node, gulp, etc)
+A simple Ruby stasis site to parse GDS Goals from a CSV into a nice looking format.
 
-## getting started
+## Getting Startged
+  1. Install stasis ```gem install stasis```
+  2. Export a 'data.csv' file with 'group_name', 'group_objective', and 'group_key_result' columns
+  3. Run ```stasis -d``` to enter development mode.
+  4. Tweak code.
+  5. browse files generated in public/
+  6. Publish public/* to some host
 
- 1. [Install gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
- 2. Install dependencies  ``` npm install --save-dev```
- 3. Run `gem install slim` to install the ruby gem for slim if you don't have it installed already
- 4. Run gulp ```gulp```
- 5. Install the LiveReload plugin if you want to use it.
- 6. Browse http://localhost:1337
- 7. Tweak your source files...
+
+  ## S3 Deployment
+  ```s3cmd sync public/ s3://<BUCKET_NAME> -P --rexclude=.git* --delete-removed --rexclude=.DS* --rexclude=.sass*```

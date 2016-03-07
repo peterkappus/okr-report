@@ -1,0 +1,30 @@
+- @current = :home
+- groups = get_goals
+.row.underbar
+  .col-md-9
+    h1 GDS Goals
+  .col-md-3
+    h1 2016/17
+.row
+  .col-md-12
+    p.lead What is GDS doing this year?
+.row
+  .col-md-4.col-md-offset-4
+    b This year we will...
+  .col-md-4
+    b As demonstrated by...
+.goals
+  - groups = get_goals
+  - groups.keys.each do |group_name|
+    .row.group
+      .col-md-4
+        h1 =group_name
+      .col-md-8
+        - groups[group_name].keys.each do |objective_name|
+          .row
+            .col-md-6
+              p.lead = objective_name
+            .col-md-6
+              ol
+                - groups[group_name][objective_name].each do |key_result|
+                  li =key_result
