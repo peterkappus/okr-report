@@ -15,10 +15,13 @@
 .goals
   - groups = get_goals
   - groups.keys.each do |group_name|
-    .row.group
-      .col-md-4
-        h1 =group_name
-      .col-md-8
+    .row
+      .col-md-12.divider
+        hr
+    .row
+      .col-md-3
+        h2 =group_name
+      .col-md-9
         - groups[group_name].keys.each do |objective_name|
           .row
             .col-md-6

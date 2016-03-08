@@ -1,9 +1,28 @@
+
+$delops_purple: #7B3B7B
+$border_color: #fff
+$footer_backround: #333
+$link_underline_color: $footer_backround
+$footer_color: #fff
+
+body
+	background: $delops_purple
+	color: #fff
+
+@media print
+	body
+		background: #fff
+		color: #000
+
 h1
 	font-size: 5rem
 	font-weight: bold
 
+h2
+	font-size: 3.5rem
+
 .col_2, .col_3
-	border-top: 1px solid #000
+	border-top: 1px solid $border_color
 
 .goals
 	h1,h2,h3
@@ -11,14 +30,12 @@ h1
 
 .underbar
 	h1,h2
-		border-bottom: 5px solid #000
+		border-bottom: 5px solid $border_color
 		margin-bottom: 3rem
 
-.group
-	border-top: 1px solid #000
-	margin-top: 3rem
-	padding-top: 1rem
-
+.divider
+	height: 3rem
+	
 .goals li
 	margin-bottom: 2rem
 	font-size: 1.8rem
@@ -28,13 +45,13 @@ h1
 	padding-top: 60px
 
 #footer
-	background-color: #333
-	color: #999
+	background-color: $footer_backround
+	color: $footer_color
 	.container
 		padding-top: 20px
 
 .nav li.current a
-	border-bottom: 5px solid #006dcc
+	border-bottom: 5px solid $link_underline_color
 
 @media (max-width: 980px)
 	body
