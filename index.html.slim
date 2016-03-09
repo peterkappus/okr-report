@@ -1,32 +1,32 @@
 - @current = :home
 .row.underbar
-  .col-md-9
+  .col-sm-9
     h1 GDS Goals
-  .col-md-3
+  .col-sm-3
     h1 2016/17
 .row
-  .col-md-12
+  .col-sm-12
     p.lead What is GDS doing this year?
 .row
-  .col-md-5.col-md-offset-3
+  .col-sm-5.col-sm-offset-3
     b This year we will...
-  .col-md-3
+  .col-sm-3
     b As demonstrated by...
 .goals
   - groups = get_goals
   - groups.keys.each do |group_name|
     .row
-      .col-md-12.divider
-        hr
+      .col-sm-12.rule
+        div
     .row
-      .col-md-3
+      .col-sm-3
         h2 =group_name
-      .col-md-9
+      .col-sm-9
         - groups[group_name].keys.each do |objective_name|
-          .row
-            .col-md-6
+          .row.objective
+            .col-sm-6
               p.lead = objective_name
-            .col-md-6
+            .col-sm-6
               ol
                 - groups[group_name][objective_name].each do |key_result|
                   li ==key_result.to_s.gsub("\n","<br>")

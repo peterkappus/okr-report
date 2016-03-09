@@ -15,7 +15,8 @@ helpers do
   def get_goals
       require 'CSV'
       groups = {}
-      CSV.foreach(Dir.glob("*.csv")[0],headers:true) do |row|
+      CSV.foreach(Dir.glob("/Users/peterk/Downloads/*.csv")[0],headers:true) do |row|
+        next if row['group_name'].to_s.empty?
         groups[row['group_name']] = {} unless groups[row['group_name']]
         groups[row['group_name']][row['group_objective']] = [] unless groups[row['group_name']][row['group_objective']]
         groups[row['group_name']][row['group_objective']]<< row['group_key_result']

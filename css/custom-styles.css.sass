@@ -1,13 +1,44 @@
 
 $delops_purple: #737
-$border_color: #fff
 $footer_backround: #333
 $link_underline_color: $footer_backround
 $footer_color: #fff
 
+/*standard*/
+$background_color: #fff
+$foreground_color: #333
+//$border_color: $delops_purple
+$border_color: $delops_purple
+$rule_color: $border_color
+
+$banner_height: 40px
+
+/*noelia mode*/
+//$background_color: $delops_purple
+//$foreground_color: #fff
+//$border_color: $foreground_color
+//$rule_color: $foreground_color
+
 body
-	background: $delops_purple
-	color: #fff
+	background: $background_color
+	color: $foreground_color
+	/* escape nav*/
+	padding-top: $banner_height
+
+.banner
+	position: fixed
+	top: 0
+	left: 0
+	border-bottom: 1px solid $foreground_color
+	z-index: 1030
+	width: 100%
+	min-height: $banner_height
+	background: #ff0
+	text-align: center
+	height: 2rem
+	h3
+		margin-top: .5rem
+		text-size: 2.5rem
 
 @media print
 	body
@@ -30,29 +61,18 @@ h2
 
 .underbar
 	h1,h2
-		border-bottom: 5px solid $border_color
+		border-bottom: 5px solid $foreground_color
 		margin-bottom: 3rem
 
-.divider
+.rule
 	height: 3rem
+	div
+		padding-top: 1rem
+		border-bottom: 3px solid $rule_color
 
-.goals li
-	margin-bottom: 2rem
-	font-size: 1.8rem
-
-// get us out from under the nav
-#wrap > .container
-	padding-top: 60px
-
-#footer
-	background-color: $footer_backround
-	color: $footer_color
-	.container
-		padding-top: 20px
-
-.nav li.current a
-	border-bottom: 5px solid $link_underline_color
-
-@media (max-width: 980px)
-	body
-		padding-top: 0
+.goals
+	li
+		margin-bottom: 2.5rem
+		font-size: 1.8rem
+	.objective
+		margin-bottom: 3rem

@@ -35,16 +35,15 @@ html lang="en"
 
 
 	body
-	  #wrap
+		.banner
+			h3 DRAFT - INTERNAL USE ONLY!
+			/
+				.container
+					.navbar-header
+						a.navbar-brand HELLO
 	    == render '_navbar.html.slim'
 	    .container
 	      == yield
-  		#push
-  	#footer
-  		.container
-  			p
-  			  / ' &copy; NAME
-
 	/ Placed at the end of the document so the pages load faster
 	script type="text/javascript" src="js/jquery.js"
 	script type="text/javascript" src="js/bootstrap.min.js"
