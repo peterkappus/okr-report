@@ -13,3 +13,6 @@ A simple Ruby stasis site to parse GDS Goals from a CSV into a nice looking form
 
 ## S3 Deployment
 ```s3cmd sync public/ s3://<BUCKET_NAME> -P --rexclude=.git* --delete-removed --rexclude=.DS* --rexclude=.sass* --rexclude=*.sh```
+
+
+s3cmd: http://s3tools.org/s3cmd
